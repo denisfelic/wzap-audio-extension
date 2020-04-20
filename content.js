@@ -1,7 +1,3 @@
-console.log('Hello World!');
-//loadComponents();
-
-
 const interval = setInterval(() => {
     const headerComponent = document.querySelector("header ._2umId");
     if (headerComponent) {    //Carregou
@@ -10,8 +6,6 @@ const interval = setInterval(() => {
     }
 
 }, 1000);
-
-
 
 function speedChange(change) {
     const audios = document.querySelectorAll("audio");
@@ -39,11 +33,7 @@ function speedChange(change) {
         return;
 
     }
-
-
-
 }
-
 
 function createElement(htmlTag, classOfTag, textContent) {
     let tag = document.createElement("div");
@@ -52,9 +42,7 @@ function createElement(htmlTag, classOfTag, textContent) {
         tag.className = classOfTag;
     }
     return tag;
-
 }
-
 
 function loadComponents(headerComponent) {
     let headerC = headerComponent;
@@ -65,13 +53,10 @@ function loadComponents(headerComponent) {
     let resetSpeed = createElement("div", "btn-wspc", "O");
     let speedUp = createElement("div", "btn-wspc", ">");
 
-   
-    
     buttons.appendChild(speedDown);
     buttons.appendChild(resetSpeed);
     buttons.appendChild(speedUp);
 
-//
     headerC.appendChild(buttons);
 
     makeFunctional(resetSpeed, 0);
@@ -81,7 +66,6 @@ function loadComponents(headerComponent) {
 
 function makeFunctional(tag, change) {
     const btn = tag;
-
     btn.addEventListener("click", () => {
         speedChange(change);
         console.log(change);
